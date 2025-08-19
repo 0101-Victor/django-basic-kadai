@@ -38,4 +38,5 @@ class LogoutView(LoginRequiredMixin, LogoutView):
 
 class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Product
-    template_name = 'product_detail.html'
+
+    template_name = 'crud/product_detail.html'
