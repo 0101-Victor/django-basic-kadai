@@ -12,6 +12,7 @@
            <th>カテゴリ</th>
            <th>画像</th>
            <th>アクション</th>
+           <th>商品詳細</th>
        </tr>
    </thead>
    {% for product in object_list %}
@@ -24,6 +25,7 @@
             <button class="btn btn-primary" onclick="location.href='{% url 'edit' pk=product.pk %}'">編集</button>
             <button class="btn btn-danger" onclick="location.href='{% url 'delete' pk=product.pk %}'">削除</button>
        </td>
+       <td><a href="{% url 'detail' product.id %}">商品詳細</a></td>
    </tr>
    {% endfor %}
 </table>
@@ -42,4 +44,5 @@
 <a href="?page={{ page_obj.next_page_number }}">次へ</a>
 <a href="?page={{ page_obj.paginator.num_pages }}">最後 &raquo;</a>
 {% endif %}
+
 {% endblock %}
