@@ -25,7 +25,7 @@
             <button class="btn btn-primary" onclick="location.href='{% url 'edit' pk=product.pk %}'">編集</button>
             <button class="btn btn-danger" onclick="location.href='{% url 'delete' pk=product.pk %}'">削除</button>
        </td>
-       <td><a href="{% url 'detail' product.id %}">商品詳細</a></td>
+       <td><a href="{% url 'detail' pk=product.pk %}">商品詳細</a></td>
    </tr>
    {% endfor %}
 </table>
@@ -46,3 +46,4 @@
 {% endif %}
 
 {% endblock %}
+
